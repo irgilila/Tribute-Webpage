@@ -1,0 +1,96 @@
+body {
+  background-color: white;
+  min-width: 300px;
+}
+#title {
+  color: black;
+  text-align: center;
+  margin-top: 50px;
+}
+#main {
+  background-color: gainsboro;
+  border-radius: 5px;
+  margin: 20px 20px 20px 10px;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: auto auto 6fr 0.5fr;
+  grid-template-areas:
+    "header header header"
+    "photo photo photo"
+    "left list right"
+    "lef footer right";
+}
+#tribute-info {
+  text-align: center;
+  font-size: larger;
+}
+#img-div {
+  background-color: white;
+  margin: -20px 10px 10px 10px;
+  display: grid;
+  padding: 5px;
+  justify-items: center;
+  grid-area: photo;
+}
+
+#img-caption {
+  text-align: center;
+}
+h2 {
+  text-align: center;
+}
+#list-div {
+  grid-area: list;
+}
+#list {
+  font-size: larger;
+  list-style-position: inside;
+  text-align: start;
+  line-height: 30px;
+}
+#image {
+  max-width: 100%;
+  height: auto;
+}
+#header-div {
+  grid-area: header;
+}
+#first {
+  margin: 60px 5px;
+}
+#second {
+  margin: 60px 5px;
+}
+#third {
+  margin: 60px 5px;
+}
+#fourth {
+  margin: 60px 5px;
+}
+#fifth {
+  margin: 60px 5px;
+}
+#footer-div {
+  grid-area: footer;
+
+  height: fit-content;
+}
+#quote {
+  font-style: italic;
+  margin-top: -30px;
+  margin-bottom: 80px;
+  font-size: 20px;
+  padding-left: 40px;
+}
+h3 {
+  text-align: center;
+}
+@media (max-width: 600px) {
+  #main {
+    grid-template-areas:
+      "header header header"
+      "photo photo photo"
+      "list list list"
+      "footer footer footer";
+  }
+}
